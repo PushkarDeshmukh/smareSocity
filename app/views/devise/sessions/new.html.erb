@@ -1,0 +1,56 @@
+<div id="wholepage">
+<center>
+<div id="box_bg" class="sign_up">
+	<div id="login-content">
+		<h1>Sign In</h1>
+		<!-- Social Buttons -->
+		<div class="social">
+		Sign in using social network:<br>
+		<div class="twitter"><a href="#" class="btn_1">Login with Twitter</a></div>
+		<div class="fb"><a href="#" class="btn_2">Login with Facebook</a></div>
+		</div>
+		<%= form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f| %>
+		<!-- Login Fields -->
+		<div id="login">Sign in using your registered account:<br>
+		<div><%= f.email_field :email, :autofocus => true , :placeholder => "Email" ,:class=> "login user"%></div>
+
+		 <div><%= f.password_field :password,:placeholder => "Password" ,:class=> "login password"%></div>
+		</div>
+		
+		<!-- Green Button -->
+		 <%= f.submit "Sign in",:class=> "button_green" %>
+
+		<!-- Checkbox -->
+		
+		<fieldset>
+			<% if devise_mapping.rememberable? -%>
+		
+		<div class="remember">
+			<span>
+			<input id="Field" name="Field" type="checkbox" class="field checkbox" value="First Choice" tabindex="4" onchange="handleInput(this);">
+			 <%= f.label :remember_me %>
+			
+			</span>
+			 <% end -%>
+		
+		</fieldset>
+		<% end %>
+		</div>
+	<div>
+	<center>
+		<%= render "devise/shared/links" %>
+	</center>
+   </div>
+
+</center>
+
+</div>
+
+  
+   
+ 
+
+ 
+
+
+

@@ -1,0 +1,55 @@
+<div id="wholepage">
+<center>
+<div id="box_bg" class="sign_up">
+	<div id="login-content">
+		<h1>Sign Up</h1>
+<%= form_for(resource, :as => resource_name, :url => registration_path(resource_name)) do |f| %>
+		<!-- Social Buttons -->
+		<div class="social">
+		Sign in using social network:<br>
+		<div class="twitter"><a href="#" class="btn_1">Login with Twitter</a>
+		</div>
+		<div class="fb"><a href="#" class="btn_2">Login with Facebook</a>
+		</div>
+		</div>
+			  <%= devise_error_messages! %>
+		
+		<!-- Login Fields -->
+		<div id="login">Sign in using your registered account:<br>
+				<div>
+	  			<%= f.email_field :email, :autofocus => true ,:class =>"login user",:placeholder => " Email "%>
+	  			</div>
+  		
+		  		<div><%= f.password_field :password  ,:class =>"login password",:placeholder => " Password "%>
+		  		</div>
+  				<div>
+  				<%= f.password_field :password_confirmation ,:class =>"login password",:placeholder => " password_confirmation "%>
+  				</div>
+		</div>
+		
+		
+		<!-- Green Button -->
+		<div >
+			<%= f.submit "Sign up" ,:class=>"button_green" %>
+			</div>
+		<!-- Checkbox -->
+		<fieldset>
+		<div>
+		<% end %>
+		
+		</div>
+		<div id="last">
+		<center>
+				<%= render "devise/shared/links" %>
+		</center>
+			</div>
+		</fieldset>
+		
+		</div>
+	</div>
+
+  </div>
+  </div>
+</center>
+
+</div>
